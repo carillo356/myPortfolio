@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import facebookLogo from '../../images/facebookLogo.png'
 import jobstreetLogo from '../../images/jobstreetLogo.png'
 
@@ -9,8 +10,8 @@ function Details() {
             <div>Hi, I'm Aaron Joseph Carillo. <br/> A passionate Web Developer <br/> based in Pasig, Philippines. </div>
         </div>
         <div className="details-social">
-            <img src={facebookLogo} className='details-facebookLogo' href="https://www.facebook.com/aaronjoseph.carillo/"/>
-            <img src={jobstreetLogo} className='details-jobstreetLogo' href="https://myjobstreet.jobstreet.com.ph/resume/attachment.php?tk=1&rid=11963376932"/>
+            <a href="https://www.facebook.com/aaronjoseph.carillo/" target="_blank"><img src={facebookLogo} className='details-facebookLogo' /></a>
+            <a href="https://drive.google.com/file/d/1ZdZiFASTEdjPJ4sVh9TVDgdHOmSVNuZ2/view?usp=sharing" target="_blank"><img src={jobstreetLogo} className='details-jobstreetLogo' /></a>
         </div>
         </>
     )
