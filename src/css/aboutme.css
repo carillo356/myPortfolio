@@ -1,0 +1,55 @@
+.aboutme {
+    height: 100vh;
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-grid {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 40vh 51vh;
+    grid-template-rows: 50vh;
+    justify-content: center;
+    gap: 30px;
+}
+
+.aboutme-grid > div:nth-child(1) {
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+}
+
+.aboutme-grid > div:nth-child(2) {
+    /* background-color: yellow; */
+}
+
+.aboutme-picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.content > div:nth-child(1) {
+    font-size: 25px;
+    font-weight: bold;
+    color: #00A0F3;
+}
+
+.content > div:nth-child(2) {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.content > div:nth-child(3) {
+    font-size: 23px;
+    letter-spacing: .1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
