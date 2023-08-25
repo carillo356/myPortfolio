@@ -5,7 +5,7 @@ import Content from './aboutmeComponents/Content'
 function AboutMe() {
   return (
     <div className="aboutme">
-        <div className='aboutme-grid'>
+        <div className='aboutme-display'>
             <div><img src={AboutMePicture} className='aboutme-picture'/></div>
             <div><Content /></div>
         </div>

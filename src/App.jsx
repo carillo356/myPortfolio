@@ -13,6 +13,7 @@ function App() {
       <div id="page-3"><Projects /></div>
       <div id="page-4"><Contact /></div>
     </>
+
   )
 }
 

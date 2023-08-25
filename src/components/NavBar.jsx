@@ -1,5 +1,7 @@
 import '../css/navbar.css'
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"
+import { FaBars, FaTimes } from "react-icons/fa"
+import { useState, useRef } from 'react'
 
 function NavBar() {
     const navRoutes =  [
@@ -25,20 +27,33 @@ function NavBar() {
       }
     ]
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    function handleClick() {
+      if(!isMenuOpen) {
+        setIsMenuOpen(prevValue => !prevValue)
+      } else {
+        setIsMenuOpen(prevValue => !prevValue)
+      }
+    }
+
     return (
       <>
-      <div className='navbar-wrapper'>
-        <div className='navbar-elements' >
-              <div>Aaron.dev</div>
-              <div className='navbar-routes'>
-                {navRoutes.map(route => (
-                  <Link activeClass="active" smooth spy to={route.page} duration={750}>
-                  {route.title}
-                  </Link>
-                ))}
-              </div>
-          </div>
-      </div>
+        <div className='navbar-wrapper'>
+          <div className='navbar-elements' >
+                <div className={isMenuOpen ? 'navbar-open-title' : 'navbar-title'}>Aaron.dev</div>
+
+                <nav className={isMenuOpen ? 'navbar-open-routes' : 'navbar-routes'}>
+                  {navRoutes.map(route => (
+                    <Link key={route.id} activeClass="active" smooth spy to={route.page} duration={750}>
+                    {route.title}
+                    </Link>
+                    
+                  ))}
+                </nav>
+                <button className="nav-btn" onClick={handleClick}><FaBars /></button>
+            </div>
+        </div>
       </>
     )
   }

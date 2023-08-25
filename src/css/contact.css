@@ -1,19 +1,24 @@
 .contact {
-    background-color: white;
-    height: 30vh;
     display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 1vh;
+
 }
 
 .contact-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
-    font-size: large;
+    font-size: 3vh;
 }
 
 .contact > div {
-    width: 90vh;
+    width: 90vw;
 }
 
 .contact > div:nth-child(1) {
@@ -21,11 +26,10 @@
     /* background-color: green  */
 }
 
-.contact-flex {
-    height: 15vh;
-    /* background-color: yellow; */
+.contact-display {
     display: flex;
-    justify-content: flex-start;
+    height: 25vh;
+    justify-content: center;
     align-items: center;
     gap: 30px;
 }
@@ -66,5 +70,10 @@
     box-shadow: 0 0 10px 0px rgba(0,0,0,.09);
 }
 
-
+@media only screen and (max-width: 600px) {
+    .contact-display {
+        flex-direction: column;
+        padding: 5vh;
+    }
+}
 

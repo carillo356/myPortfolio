@@ -7,7 +7,7 @@ function Contact() {
   return (
     <div className='contact'>
       <div className='contact-text'>CONTACT</div>
-      <div className='contact-flex'>
+      <div className='contact-display'>
         <div className='location'>
           <img src={LocationLogo} />
           <div className='location'>Location <br/> Pasig Philippines</div>
